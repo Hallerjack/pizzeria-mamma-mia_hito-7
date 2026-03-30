@@ -1,3 +1,5 @@
+import { formatNumber } from "./utils/formatNumber";
+
 const Navbar = () => {
     const total = 25000;
     const token = false;
@@ -9,15 +11,24 @@ const Navbar = () => {
                     <h3>Pizzeria Mamma Mia!</h3>
                 </div>
                 <div id='nav-buttons'>
-                    <button id='profile-button'>🔓 Profile</button>
-                    <button id='logout-button'>🔒 Logout</button>
-                    <button id='login-button'>🔐 Login</button>
-                    <button id='register-button'>🔐 Register</button>
+                    <button>🍕 Home</button>
+
+                    {token ? (
+                        <>
+                            <button id='profile-button'>🔓 Profile</button>
+                            <button id='logout-button'>🔒 Logout</button>
+                        </>
+                    ) : (
+                        <>
+                            <button id='login-button'>🔐 Login</button>
+                            <button id='register-button'>🔐 Register</button>
+                        </>
+                    )}
                 </div>
             </div>
             <div id='right-container'>
                 <div id='nav-total'>
-                    <button id='total-button'>🛒 Total: ${total}</button>
+                    <button id='total-button'>🛒 Total: {formatNumber(total)}</button>
                 </div>
             </div>
         </div>

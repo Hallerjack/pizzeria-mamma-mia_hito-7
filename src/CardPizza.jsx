@@ -1,3 +1,5 @@
+import { formatNumber } from "./utils/formatNumber";
+
 const CardPizza = (pizza) => {
     return (
         <div id='product-card'>
@@ -5,8 +7,8 @@ const CardPizza = (pizza) => {
                 <img id='product-img' src={pizza.img}></img>
                 <h3>{pizza.name}</h3>
                 <h4>Ingredientes:</h4>
-                <p>{pizza.ingredients}</p>
-                <h3>Precio: {pizza.price}</h3>
+                <p>{pizza.ingredients.join(", ")}</p>
+                <h4>Precio: {formatNumber(pizza.price)}</h4>
             </div>
             <div id='footer-product'>
                 <button>Ver más</button>
