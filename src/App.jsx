@@ -1,5 +1,5 @@
 import Navbar from './Navbar'
-import Cart from './Cart'
+import Pizza from './Pizza'
 import Footer from './Footer'
 import './App.css'
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Cart />
+      <Pizza />
       <Footer />
     </>
   )

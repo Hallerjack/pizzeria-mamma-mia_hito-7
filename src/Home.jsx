@@ -1,8 +1,19 @@
+import { useState, useEffect } from "react";
 import Header from "./Header";
 import CardPizza from "./CardPizza";
-import { pizzas } from "./pizzas";
 
 function Home() {
+    const [pizzas, setPizzas] = useState([]);
+
+    useEffect(() => {
+        const getPizzas = async () => {
+            const res = await fetch("http://localhost:5000/api/pizzas");
+            const data = await res.json();
+            setPizzas(data);
+        };
+        getPizzas();
+    }, []);
+
     return (
         <div id='home'>
             <Header />
