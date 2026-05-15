@@ -24,13 +24,14 @@ El sistema de enrutamiento responderá a una vista index, a los componentes regi
 (1 punto)
 
 3.	Crea las rutas necesarias para los componentes: (2 puntos)
-●	La ruta “/” debe mostrar el componente Home.
-●	La ruta “/register” debe mostrar el componente Register.
-●	La ruta “/login” debe mostrar el componente Login.
-●	La ruta “/cart” debe mostrar el componente Cart.
-●	La ruta “/pizza/p001” debe mostrar el componente Pizza.
-●	La ruta “/profile” debe mostrar un componente Profile.
-●	La ruta “/404” debe mostrar un componente NotFound.
+
+-	La ruta “/” debe mostrar el componente Home.
+-	La ruta “/register” debe mostrar el componente Register.
+-	La ruta “/login” debe mostrar el componente Login.
+-	La ruta “/cart” debe mostrar el componente Cart.
+-	La ruta “/pizza/p001” debe mostrar el componente Pizza.
+-	La ruta “/profile” debe mostrar un componente Profile.
+-	La ruta “/404” debe mostrar un componente NotFound.
 
 4.	Implementa un componente NotFound que se muestre cuando una ruta no exista. Utiliza tu creatividad para esta página, pero debe contener un enlace que redirija a la ruta “/”. (2 puntos)
 
