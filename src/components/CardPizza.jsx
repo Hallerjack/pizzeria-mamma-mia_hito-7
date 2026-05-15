@@ -1,6 +1,6 @@
 import { formatNumber } from "../utils/formatNumber";
 
-const CardPizza = (pizza) => {
+const CardPizza = ({ pizza, onAdd }) => {
     return (
         <div id='product-card'>
             <div id='head-product'>
@@ -16,7 +16,7 @@ const CardPizza = (pizza) => {
             </div>
             <div id='footer-product'>
                 <button>Ver más</button>
-                <button>Añadir</button>
+                <button onClick={() => onAdd(pizza)}>Añadir</button>
             </div>
         </div>
     );
