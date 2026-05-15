@@ -1,11 +1,12 @@
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
+import { UserContext } from '../context/UserContext'
 import { formatNumber } from "../utils/formatNumber"
 
 const Navbar = () => {
     const { total } = useContext(CartContext)
-    const token = false
+    const { token, logout } = useContext(UserContext)
 
     return (
         <div id='navbar'>
@@ -19,12 +20,13 @@ const Navbar = () => {
                     <Link to="/">
                         <button>🍕 Home</button>
                     </Link>
+
                     {token ? (
                         <>
                             <Link to="/profile">
                                 <button id='profile-button'>🔓 Profile</button>
                             </Link>
-                            <button id='logout-button'>🔒 Logout</button>
+                            <button id='logout-button' onClick={logout}>🔒 Logout</button>
                         </>
                     ) : (
                         <>
