@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { pizzaCart } from "./pizzas";
-import { formatNumber } from "./utils/formatNumber";
+import { pizzaCart } from "../pizzas";
+import { formatNumber } from "../utils/formatNumber";
 
 const Cart = () => {
     const [cart, setCart] = useState(pizzaCart);

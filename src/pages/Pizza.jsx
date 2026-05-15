@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { formatNumber } from "./utils/formatNumber";
+import { formatNumber } from "../utils/formatNumber";
 
 const Pizza = () => {
     const [pizza, setPizza] = useState({});
