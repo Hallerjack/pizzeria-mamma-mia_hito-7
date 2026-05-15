@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { formatNumber } from "../utils/formatNumber";
 
 const CardPizza = ({ pizza, onAdd }) => {
@@ -15,7 +16,9 @@ const CardPizza = ({ pizza, onAdd }) => {
                 <h4>Precio: {formatNumber(pizza.price)}</h4>
             </div>
             <div id='footer-product'>
-                <button>Ver más</button>
+                <Link to={`/pizza/${pizza.id}`}>
+                    <button>Ver más</button>
+                </Link>
                 <button onClick={() => onAdd(pizza)}>Añadir</button>
             </div>
         </div>

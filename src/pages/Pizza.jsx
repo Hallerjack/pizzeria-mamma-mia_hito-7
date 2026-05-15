@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { formatNumber } from "../utils/formatNumber";
 
 const Pizza = () => {
     const [pizza, setPizza] = useState({});
+    const { id } = useParams();
 
     useEffect(() => {
         const getPizza = async () => {
-            const res = await fetch("http://localhost:5000/api/pizzas/p001");
+            const res = await fetch(`http://localhost:5000/api/pizzas/${id}`);
             const data = await res.json();
             setPizza(data);
         };
         getPizza();
-    }, []);
+    }, [id]);
 
     return (
         <div className="pizza-container">
