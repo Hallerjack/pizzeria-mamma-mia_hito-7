@@ -1,8 +1,10 @@
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../context/CartContext'
 import { formatNumber } from "../utils/formatNumber"
 
 const Navbar = () => {
-    const total = 25000
+    const { total } = useContext(CartContext)
     const token = false
 
     return (
@@ -17,7 +19,6 @@ const Navbar = () => {
                     <Link to="/">
                         <button>🍕 Home</button>
                     </Link>
-
                     {token ? (
                         <>
                             <Link to="/profile">
